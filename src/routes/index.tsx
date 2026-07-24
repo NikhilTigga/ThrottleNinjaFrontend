@@ -23,7 +23,7 @@ const FAQPages = React.lazy(() => import('../pages/other/FAQ'))
 const PricingPages = React.lazy(() => import('../pages/other/Pricing'))
 const MaintenancePages = React.lazy(() => import('../pages/other/Maintenance'))
 const StarterPages = React.lazy(() => import('../pages/other/Starter'))
-
+const ManagePost = React.lazy(()=> import('../pages/sidebarpages/ManagePost'))
 const Addhotels = React.lazy(() => import('../pages/sidebarpages/Addhotels'))
 
 const HotellistPages = React.lazy(() => import('../pages/sidebarpages/Hotellist'))
@@ -173,6 +173,13 @@ const customPagesRoutes = {
 			path: '/pages/viewusers',
 			name: 'Starter Page',
 			element: <StarterPages />,
+			route: PrivateRoute,
+		},
+
+		{
+			path: '/pages/ManagePost',
+			name: 'Starter Page',
+			element: <ManagePost />,
 			route: PrivateRoute,
 		},
 

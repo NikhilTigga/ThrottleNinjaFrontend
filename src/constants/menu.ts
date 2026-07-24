@@ -28,8 +28,8 @@ const MENU_ITEMS: MenuItemTypes[] = [
 		
 	},
 	{
-		key: 'Users',
-		label: 'Users',
+		key: 'Usersmanagement',
+		label: 'Users Management',
 		isTitle: false,
 		icon: 'ri-pages-line',
 		children: [
@@ -39,14 +39,28 @@ const MENU_ITEMS: MenuItemTypes[] = [
 				url: '/pages/viewusers',
 				parentKey: 'pages',
 			},
+			{
+				key: 'manage-clubs',
+				label: 'Manage Clubs',
+				url: '/pages/manageClubs',
+				parentKey: 'pages',
+			},
+
+			{
+				key: 'monitor-reports-complaints',
+				label: 'Monitor Reports & Complaints',
+				url: '/pages/monitorReportComplaints',
+				parentKey: 'pages',
+			},
 		],
 	},
 	{
-		key: 'Hotels',
-		label: 'Hotels',
+		key: 'hotels-management',
+		label: 'Hotels Management',
 		isTitle: false,
 		icon: 'ri-pages-line',
 		children: [
+
 			{
 				key: 'add-hotels',
 				label: 'Add Hotels',
@@ -60,8 +74,140 @@ const MENU_ITEMS: MenuItemTypes[] = [
 				url: '/pages/hotel-list',
 				parentKey: 'hotels',
 			},
+
+			{
+				key: 'update-price',
+				label: 'Update Price',
+				url: '/pages/updatePrice',
+				parentKey: 'pages',
+			},
+
+			{
+				key: 'manage-availability',
+				label: 'Manage Availability',
+				url: '/pages/manageAvailability',
+				parentKey: 'pages',
+			},
+
+			{
+				key: 'booking-management',
+				label: 'Booking Management',
+				url: '/pages/bookingManagement',
+				parentKey: 'pages',
+			},
 		],
 	},
+
+	{
+		key: 'Ride-content-management',
+		label: 'Ride & Content Management',
+		isTitle: false,
+		icon: 'ri-pages-line',
+		children: [
+
+			{
+				key: 'manage-post',
+				label: 'Manage Post',
+				url: '/pages/ManagePost',
+				parentKey: 'pages',
+			},
+
+			{
+				key: 'moderate-photos-videos',
+				label: 'Moderate Photos/Videos',
+				url: '/pages/moderatePhotosVideos',
+				parentKey: 'hotels',
+			},
+
+			{
+				key: 'remove-content',
+				label: 'Remove Content',
+				url: '/pages/removeContent',
+				parentKey: 'pages',
+			},
+
+			{
+				key: 'manage-ride-routes',
+				label: 'Manage Ride Routes',
+				url: '/pages/manageRideRoutes',
+				parentKey: 'pages',
+			},
+
+			
+		],
+	},
+
+	{
+		key: 'digital-locker-management',
+		label: 'Digital Locker Management',
+		isTitle: false,
+		icon: 'ri-pages-line',
+		children: [
+
+			{
+				key: 'verify-documents',
+				label: 'Verify Documents',
+				url: '/pages/verifyDocuments',
+				parentKey: 'pages',
+			},
+
+			{
+				key: 'rc-license-validation',
+				label: 'RC & License Validation',
+				url: '/pages/rcLicenseValidation',
+				parentKey: 'hotels',
+			},
+
+			{
+				key: 'document-record',
+				label: 'Document Record',
+				url: '/pages/documentRecord',
+				parentKey: 'pages',
+			},
+		],
+	},
+
+	{
+		key: 'payment-management',
+		label: 'Payment Management',
+		isTitle: false,
+		icon: 'ri-pages-line',
+		children: [
+
+			{
+				key: 'payment-report',
+				label: 'Payment Report',
+				url: '/pages/paymentReport',
+				parentKey: 'pages',
+			},
+
+			{
+				key: 'transaction-history',
+				label: 'Transaction History',
+				url: '/pages/transactionHistory',
+				parentKey: 'payment',
+			},
+
+			{
+				key: 'refund-management',
+				label: 'Refund Management',
+				url: '/pages/refundManagement',
+				parentKey: 'pages',
+			},
+
+			
+			{
+				key: 'revenue-analytics',
+				label: 'Revenue Analytics',
+				url: '/pages/revenueAnalytics',
+				parentKey: 'pages',
+			},
+
+			
+			
+		],
+	},
+
 
 	{
 		key: 'auth',
