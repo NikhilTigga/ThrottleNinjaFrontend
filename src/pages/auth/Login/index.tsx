@@ -9,8 +9,8 @@ import useLogin from './useLogin'
 import { VerticalForm, FormInput, PageBreadcrumb } from '@/components'
 
 interface UserData {
-	email: string
-	password: string
+  mobileno: string
+  password: string
 }
 
 const BottomLinks = () => {
@@ -32,11 +32,12 @@ const BottomLinks = () => {
 }
 
 const schemaResolver = yupResolver(
-	yup.object().shape({
-		email: yup.string().required('Please enter Username'),
-		password: yup.string().required('Please enter Password'),
-	})
+  yup.object().shape({
+    mobileno: yup.string().required('Please enter mobile number'),
+    password: yup.string().required('Please enter Password'),
+  })
 )
+
 const Login = () => {
 	const { loading, login, redirectUrl, isAuthenticated } = useLogin()
 	return (
@@ -54,29 +55,28 @@ const Login = () => {
 				<VerticalForm<UserData>
 					onSubmit={login}
 					resolver={schemaResolver}
-					defaultValues={{ email: 'velonic@techzaa.com', password: 'Velonic' }}
-				>
+					defaultValues={{ mobileno: '', password: '' }}
+					>
 					<FormInput
-						label="Email address"
+						label="Mobile Number"
+						name="mobileno"
 						type="text"
-						name="email"
-						placeholder="Enter your email"
+						placeholder="Enter your mobile number"
 						containerClass="mb-3"
 						required
 					/>
-					<FormInput
-						label="Password"
-						name="password"
-						type="password"
-						required
-						id="password"
-						placeholder="Enter your password"
-						containerClass="mb-3"
-					>
+					 <FormInput
+								label="Password"
+								name="password"
+								type="password"
+								required
+								placeholder="Enter your password"
+								containerClass="mb-3"
+							/>
 						<Link to="/auth/forgot-password" className="text-muted float-end">
 							<small>Forgot your password?</small>
 						</Link>
-					</FormInput>
+					
 					<FormInput
 						label="Remember me"
 						type="checkbox"
