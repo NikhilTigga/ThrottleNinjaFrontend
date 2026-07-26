@@ -41,6 +41,7 @@ import { useMutation } from '@apollo/client/react'
 import { useMemo } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useAuthContext } from '@/common/context'
+import { notify } from '@/utils/notify'
 
 const LOGIN_MUTATION = gql`
   mutation Login($mobileno: String!, $password: String!) {
@@ -104,12 +105,17 @@ const [loginMutation, { loading }] = useMutation<
           accessToken: result.accessToken,
           refreshToken: result.refreshToken,
         })
+        notify.success('Login successful')
         navigate(redirectUrl)
       } else {
         console.error(result?.message || 'Login failed')
+
+        const errorMessage = result?.message || 'Login failed'
+        notify.error(errorMessage)
       }
     } catch (error) {
       console.error(error)
+      notify.error('An error occurred while logging in')
     }
   }
 

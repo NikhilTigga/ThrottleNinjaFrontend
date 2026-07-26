@@ -3,7 +3,7 @@ import React, { ReactNode, useEffect } from 'react'
 //images
 import authImg from '@/assets/images/auth-img.jpg'
 import logo from '@/assets/images/logo.png'
-import logoDark from '@/assets/images/logo-dark.png'
+import logoDark from '@/assets/images/logo.png'
 
 import { Card, Col, Container, Image, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
@@ -52,7 +52,7 @@ const AuthLayout = ({
 								<Row className="g-0">
 									<Col lg={6} className="d-none d-lg-block p-2">
 										<Image
-											src={authImg}
+											src={authImg}	
 											alt=""
 											className="img-fluid rounded h-100"
 										/>
@@ -64,7 +64,7 @@ const AuthLayout = ({
 													<Image src={logo} alt="logo" height="22" />
 												</a>
 												<a href="index.html" className="logo-dark">
-													<Image src={logoDark} alt="dark logo" height="22" />
+													<Image src={logoDark} alt="dark logo" height="90" />
 												</a>
 											</div>
 											<div
@@ -94,7 +94,7 @@ const AuthLayout = ({
 
 												{children}
 
-												{hasThirdPartyLogin && (
+												{/* {hasThirdPartyLogin && (
 													<div className="text-center mt-4">
 														<p className="text-muted fs-16">Sign in with</p>
 														<div className="d-flex gap-2 justify-content-center mt-3">
@@ -112,7 +112,7 @@ const AuthLayout = ({
 															</Link>
 														</div>
 													</div>
-												)}
+												)} */}
 											</div>
 										</div>
 									</Col>
@@ -125,7 +125,7 @@ const AuthLayout = ({
 			</div>
 			<footer className="footer footer-alt fw-medium">
 				<span className="text-dark">
-					{new Date().getFullYear()} © Velonic - Theme by Techzaa
+					{new Date().getFullYear()} © Throttle Ninja
 				</span>
 			</footer>
 		</div>

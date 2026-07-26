@@ -28,7 +28,7 @@ import { ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client'
 import { setContext } from '@apollo/client/link/context'
 
 const httpLink = createHttpLink({
-  uri: import.meta.env.VITE_GRAPHQL_URL || 'http://172.25.208.1:8000/graphql/graphql/',
+  uri: import.meta.env.VITE_GRAPHQL_URL || 'http://127.0.0.1:8000/graphql/graphql/',
   credentials: 'include',
 })
 

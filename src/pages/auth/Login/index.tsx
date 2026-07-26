@@ -17,7 +17,7 @@ const BottomLinks = () => {
 	return (
 		<Row>
 			<Col xs={12} className="text-center">
-				<p className="text-dark-emphasis">
+				{/* <p className="text-dark-emphasis">
 					Don't have an account?{' '}
 					<Link
 						to="/auth/register"
@@ -25,7 +25,7 @@ const BottomLinks = () => {
 					>
 						<b>Sign up</b>
 					</Link>
-				</p>
+				</p> */}
 			</Col>
 		</Row>
 	)
@@ -48,7 +48,7 @@ const Login = () => {
 
 			<AuthLayout
 				authTitle="Sign In"
-				helpText="Enter your email address and password to access account."
+				helpText="Enter your Mobile Number and password to access account."
 				bottomLinks={<BottomLinks />}
 				hasThirdPartyLogin
 			>

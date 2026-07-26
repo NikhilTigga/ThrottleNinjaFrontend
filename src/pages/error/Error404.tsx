@@ -7,7 +7,7 @@ import { useEffect } from 'react'
 //images
 import authImg from '@/assets/images/auth-img.jpg'
 import logo from '@/assets/images/logo.png'
-import logoDark from '@/assets/images/logo-dark.png'
+import logoDark from '@/assets/images/logo.png'
 import errorImg from '@/assets/images/svg/404.svg'
 
 const Error404 = () => {
@@ -41,7 +41,7 @@ const Error404 = () => {
 													<Image src={logo} alt="logo" height={22} />
 												</Link>
 												<Link to="index.html" className="logo-dark">
-													<img src={logoDark} alt="dark logo" height={22} />
+													<img src={logoDark} alt="dark logo" height={90} />
 												</Link>
 											</div>
 											<div className="p-4 my-auto">
